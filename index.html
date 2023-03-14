@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HALAMAN MASUK HIMTIK UNIMAR</title>
+     <link rel = "stylesheet" type = "text/css" href = "CSS/login.css">  
+</head>
+
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="container-label">MASUK<span></span></div>
+
+        <div class="container-icon">
+          <div class="circle"><i class="bi bi-chevron-right"></i></div>
+        </div>
+
+        <div class="container-form">
+          <form name="login" action ="PHP/login.php" onsubmit = "return validation()" method ="POST">
+            <label for="nim">NIM</label>
+            <input type="text" id="nim" name="nim" placeholder="Masukan nim" autofocus/>
+
+            <label for="pass">Password</label>
+            <input type="password" id="pass" name="pass" placeholder="Masukan Password"/>
+
+            <div class="daftar">Belum Daftar?
+              <a href="daftar.html">Klik disini</a>
+            </div>
+
+            <button type="submit">Masuk</button>
+
+             <script>  
+        // validation for empty field
+            function validation()  
+            {  
+                var nim=document.login.nim.value;  
+                var pass=document.login.pass.value;  
+                if(nim.length=="" && pass.length=="") {  
+                    alert("Masukan nim dan password");  
+                    return false;  
+                }  
+                else  
+                {  
+                    if(nim.length=="") {  
+                        alert("Masukan nim");  
+                        return false;  
+                    }   
+                    if (pass.length=="") {  
+                    alert("Masukan password");  
+                    return false;  
+                    }  
+                }                             
+            }  
+        </script>  
+     
+        </div> 
+      </div>
+    </div>
+  </body>
+</html>

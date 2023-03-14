@@ -1,0 +1,89 @@
+<html>  
+<head>  
+    <title>HALAMAN DAFTAR HIMTIK UNIMAR</title>
+    <link rel = "stylesheet" type = "text/css" href = "CSS/login.css">   
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">  
+            <div class="container-label">Daftar<span></span></div>  
+            
+            <div class="container-form">
+                <form name="input" action ="PHP/input.php" onsubmit = "return validation()" method ="POST"> 
+                    <label>Email</label>
+                    <input type="email" id="email" name="email" placeholder="Masukan Email" maxlength="30">   
+
+                    <label>Password</label>
+                    <input type="text" id="pass" name="pass" placeholder="Masukan Password" maxlength="20">  
+
+                    <label>Nama</label>
+                    <input type="text" id="nama" name="nama" placeholder="Masukan Nama" maxlength="20"> 
+
+                    <label>NIM</label>
+                    <input type="text" id="nim" name="nim" placeholder="Masukan NIM" maxlength="7">
+
+                    <label>Kelas</label>
+                        <select id="kelas" name="kelas">
+                        <option value="reguler">Reguler</option>
+                        <option value="malam">Malam</option>
+                        <option value="shift">shift</option>
+                        <option value="karyawan">Karyawan</option>
+                        </select>
+
+                    <label>Telepon</label>
+                    <input type="telepon" id="telepon" name="telepon" placeholder="Masukan Telepon" maxlength="12">  
+
+                   <button type = "submit" id = "Submit" name="Submit" value = "Submit">Submit</button>
+
+                    <script>  
+        // validation for empty field
+            function validation()  
+            {  
+                
+                var email=document.input.email.value;  
+                var pass=document.input.pass.value;
+                var nama=document.input.nama.value;
+                var nim=document.input.nim.value;
+                var kelas=document.input.kelas.value;
+                var telepon=document.input.telepon.value; 
+                if(email.length=="" && pass.length=="" && nama.length=="" && nim.length=="" && kelas.length=="" && telepon.length=="") {  
+                    alert("Data Harap Dilengkapi");  
+                    return false;  
+                }  
+                else  
+                {  
+                    if(email.length=="") {  
+                        alert("Masukan email");  
+                        return false;  
+                    }   
+                    if (pass.length=="") {  
+                    alert("Masukan password");  
+                    return false;  
+                    }  
+                    if (nama.length=="") {  
+                    alert("Masukan nama");  
+                    return false;  
+                    }  
+                    if (nim.length=="") {  
+                    alert("Masukan nim");  
+                    return false;  
+                    }  
+                    if (kelas.length=="") {  
+                    alert("Masukan kelas");  
+                    return false;  
+                    }  
+                    if (telepon.length=="") {  
+                    alert("Masukan telepon");  
+                    return false;  
+                    }  
+
+                }                             
+            }  
+        </script>  
+
+            </div>
+            </div> 
+        </form>  
+    </div>  
+</body>
